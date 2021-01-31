@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUITask01App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(NetworkManager())
         }
     }
 }

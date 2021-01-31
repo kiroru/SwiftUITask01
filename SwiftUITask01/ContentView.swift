@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @EnvironmentObject var contentViewModel: NetworkManager
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(contentViewModel.items) { item in
+            ItemView(item: item)
+        }
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
